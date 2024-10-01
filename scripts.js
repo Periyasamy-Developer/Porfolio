@@ -19,22 +19,6 @@ let navbar = document.querySelector('.navbar');
 let section = document.querySelectorAll('.section');
 let navLinks = document.querySelectorAll('.header nav a');
 
-// window.onscroll = () => {
-//     sections.forEach(sec => {
-//         let top = window.scrollY;
-//         let offset = window.offsetTop - 150;
-//         let height = window.offsetHeight;
-//         let id = sec.getAttribute('id');
-
-//         if (top >= offset && top < offset + height) {
-//             navLinks.forEach(links => {
-//                 links.classList.remove('active');
-//                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-
-//             })
-//         }
-//     })
-// }
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
@@ -114,8 +98,104 @@ function totalExperience(start){
 
     // console.log(years,".",months," this is my Experience");
     return years+'.'+months;
-
 }
+
+
+let isDarkMode = false;
+
+// Function to toggle between dark and light modes
+function toggleTheme() {
+  isDarkMode = !isDarkMode;
+
+  if (isDarkMode) {
+    // Add 'darkmode' class and remove 'lightmode' class
+    document.body.classList.add('darkmode');
+    document.body.classList.remove('lightmode');
+  } else {
+    // Add 'lightmode' class and remove 'darkmode' class
+    document.body.classList.add('lightmode');
+    document.body.classList.remove('darkmode');
+  }
+}
+
+// Event listener to trigger the toggleTheme function
+document.getElementById('themeToggleButton').addEventListener('click', toggleTheme);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
+  const sb = ScrollReveal({
+    duration: 1000,
+    delay: 500,
+    mobile: false,
+    origin: 'bottom',
+    distance: '60px'
+  });
+
+  sb.reveal('.header', { origin: 'top' });
+  sb.reveal('.home .home-content, .skill-container .skills-box:nth-child(1), .service-container .services-box:nth-child(1), .contact-container .contact-section:nth-child(1), .timeline-items .timeline-item:nth-child(1), .timeline-items .timeline-item:nth-child(3)', {origin: 'left'});
+  sb.reveal('.home .home-img, .skill-container .skills-box:nth-child(2), .service-container .services-box:nth-child(2), .contact-container .contact-section:nth-child(2), .timeline-items .timeline-item:nth-child(2)', {origin: 'right'});
+  sb.reveal('.about .about-content, .about .about-img, .service-container .services-box:nth-child(3), .footer', { origin: 'bottom' });
+  sb.reveal('.skills, .resumes, .resume-container, .services, .contact, .footer .social', { origin: 'bottom', delay: 600 });
+  sb.reveal('.heading, h3, .footer .list', { origin: 'bottom', delay: 500 });
+  // sb.reveal('', { origin: 'bottom', delay: 500 });
+
+  
+  // sb.reveal('', { origin: 'bottom', delay: 500 });
+  // sb.reveal('.section_header_container .main_head', { origin: 'bottom', delay: 600 });
+  // sb.reveal('.section_header_container .sub_head', { origin: 'bottom', delay: 500 });
+
+
+
+
+
+
+
+
+
+    let wr = document.querySelector('.wrapper');
+    let bg = document.querySelector('.background');
+    let bg2 = document.querySelector('.background-2');
+    let sun = document.querySelector('.sun');
+    let circles = document.querySelectorAll('.sun-circle');
+    let spots = document.querySelectorAll('.sun-spot');
+  
+    let flag = false;
+    if (wr) {  // Ensure wr is not null
+      wr.addEventListener('click', () => {
+        if (flag == false) {
+          bg.classList.add('background_active');
+          wr.classList.add('wrapper_active');
+          sun.classList.add('sun_active');
+          circles[0].classList.add('sun-circle_active');
+          circles[1].classList.add('sun-circle-two_active');
+          circles[2].classList.add('sun-circle-three_active');
+          bg2.classList.add('background-2_active');
+          spots.forEach((item) => { item.classList.add('sun-spot_active') })
+          flag = true;
+        }
+      });
+    } else {
+      if (bg) {
+        bg.classList.remove('background_active');
+      }
+      wr ? wr.classList.remove('wrapper_active') : '';
+      sun ? sun.classList.remove('sun_active') : '';
+      circles[0] ? circles[0].classList.remove('sun-circle_active') : '';
+      circles[1] ? circles[1].classList.remove('sun-circle-two_active') : '';
+      circles[2] ? circles[2].classList.remove('sun-circle-three_active') : '';
+      bg2 ? bg2.classList.remove('background-2_active') : '';
+      // wr.classList.remove('wrapper_active');
+      // sun.classList.remove('sun_active');
+      // circles[0].classList.remove('sun-circle_active');
+      // circles[1].classList.remove('sun-circle-two_active');
+      // circles[2].classList.remove('sun-circle-three_active');
+      // bg2.classList.remove('background-2_active');
+      spots.forEach((item) => { item.classList.remove('sun-spot_active') })
+      flag = false;
+    }
+  });
 
 
 
