@@ -10,6 +10,9 @@
     --header-bg-color:rgba(255, 255, 255, 0.7);
     --about-bg-color:#ddf0f5;
     --card-border-color:0.2rem solid rgb(224, 224, 224);
+    --static-white: white;
+    --footer-bg-color: #0ab8e9;
+    --footer-color:white;
 }
 
 
@@ -22,6 +25,8 @@
     --about-bg-color:#ddf0f5;
     --card-border-color:0.2rem solid rgb(224, 224, 224);
     --static-white: white;
+    --footer-bg-color: #0ab8e9;
+    --footer-color:white;
 }
 
 .darkmode{
@@ -33,6 +38,8 @@
     --about-bg-color:#666d6e;
     --card-border-color:0.2rem solid rgb(255, 255, 255);
     --static-white: white;
+    --footer-bg-color: rgb(0 0 0 / 78%);
+    --footer-color:#0ab8e9;
 }
 
 
@@ -862,7 +869,7 @@ section {
 }
 
 .contact {
-    background-color: #ddf0f5;
+    background: var(--about-bg-color);
 }
 
 .contact h2 {
@@ -942,19 +949,19 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 40px 0;
-    background-color: var(--primary-color);
+    background-color: var(--footer-bg-color);
 }
 
 .footer .social {
     text-align: center;
     padding-bottom: 25px;
-    color: var(--secondary-bg-color);
+    color: var(--footer-color);
 }
 
 footer .social a {
     font-size: 25px;
-    color: var(--secondary-bg-color);
-    border: 2px solid var(--secondary-bg-color);
+    color: var(--footer-color);
+    border: 2px solid var(--footer-color);
     width: 42px;
     height: 42px;
     line-height: 42px;
@@ -981,13 +988,13 @@ footer .social a:hover {
 }
 
 .footer ul li a {
-    color: var(--secondary-bg-color);
+    color: var(--footer-color);
     border-bottom: 3px solid transparent;
     transition: 0.3s ease;
 }
 
 .footer ul li a:hover {
-    border-bottom: 3px solid var(--secondary-bg-color);
+    border-bottom: 3px solid var(--footer-color);;
 }
 
 .footer ul li {
@@ -997,7 +1004,7 @@ footer .social a:hover {
 
 
 a {
-    color: var(--primary-color);
+    color: var(--footer-color);
 }
 
 
