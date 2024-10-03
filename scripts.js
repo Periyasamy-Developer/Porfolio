@@ -166,9 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
   sb.reveal('.header', { origin: 'top' });
   sb.reveal('.home .home-content, .skill-container .skills-box:nth-child(1), .service-container .services-box:nth-child(1), .contact-container .contact-section:nth-child(1), .timeline-items .timeline-item:nth-child(odd), .about-circle,  .personal-details ul li:nth-child(odd)', { origin: 'left', reset: true });
   sb.reveal('.home .home-img, .skill-container .skills-box:nth-child(2), .service-container .services-box:nth-child(2), .contact-container .contact-section:nth-child(2), .timeline-items .timeline-item:nth-child(even),  .personal-details ul li:nth-child(even)', { origin: 'right', reset: true });
-  sb.reveal('.about .about-content, .about .about-img, .service-container .services-box:nth-child(3), .footer', { origin: 'bottom', reset: true });
-  sb.reveal('.skills, .resumes, .resume-container, .services, .contact, .footer .social', { origin: 'bottom', delay: 600, reset: true });
-  sb.reveal('.heading, h3, .footer .list', { origin: 'bottom', delay: 500, reset: true });
+  sb.reveal('.about .about-content, .about .about-img, .service-container .services-box:nth-child(3)', { origin: 'bottom', reset: true });
+  sb.reveal('.skills, .resumes, .resume-container, .services, .contact', { origin: 'bottom', delay: 600, reset: true });
+  sb.reveal('.heading, h3', { origin: 'bottom', delay: 500, reset: true });
   sb.reveal('.home-circle-2', { origin: 'top', delay: 600, reset: true });
   sb.reveal('.home-circle-1', { origin: 'bottom', delay: 500, reset: true });
 
