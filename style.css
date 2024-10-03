@@ -1088,7 +1088,7 @@ a {
     .home-circle-1 {
         width: 45vw;
         height: 45vw;
-        top: 28rem;
+        top: 23rem;
         right: 39px;
         /* top: 50rem;         */
 
@@ -1133,8 +1133,10 @@ a {
     .about-circle {
         height: 52vw;
         width: 52vw;
-        position: relative;
-        bottom: 731px;
+        /* position: relative;
+        bottom: 731px; */
+        position: absolute;
+        margin-top: 525px;
     }
 
     .about-content {
