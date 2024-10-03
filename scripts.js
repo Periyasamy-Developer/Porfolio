@@ -128,17 +128,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const sb = ScrollReveal({
     duration: 1000,
     delay: 500,
-    mobile: false,
+    mobile: true,
     origin: 'bottom',
     distance: '60px'
   });
 
   sb.reveal('.header', { origin: 'top' });
-  sb.reveal('.home .home-content, .skill-container .skills-box:nth-child(1), .service-container .services-box:nth-child(1), .contact-container .contact-section:nth-child(1), .timeline-items .timeline-item:nth-child(1), .timeline-items .timeline-item:nth-child(3)', {origin: 'left'});
-  sb.reveal('.home .home-img, .skill-container .skills-box:nth-child(2), .service-container .services-box:nth-child(2), .contact-container .contact-section:nth-child(2), .timeline-items .timeline-item:nth-child(2)', {origin: 'right'});
+  sb.reveal('.home .home-content, .skill-container .skills-box:nth-child(1), .service-container .services-box:nth-child(1), .contact-container .contact-section:nth-child(1), .timeline-items .timeline-item:nth-child(odd), .about-circle', {origin: 'left'});
+  sb.reveal('.home .home-img, .skill-container .skills-box:nth-child(2), .service-container .services-box:nth-child(2), .contact-container .contact-section:nth-child(2), .timeline-items .timeline-item:nth-child(even)', {origin: 'right'});
   sb.reveal('.about .about-content, .about .about-img, .service-container .services-box:nth-child(3), .footer', { origin: 'bottom' });
   sb.reveal('.skills, .resumes, .resume-container, .services, .contact, .footer .social', { origin: 'bottom', delay: 600 });
   sb.reveal('.heading, h3, .footer .list', { origin: 'bottom', delay: 500 });
+  sb.reveal('.home-circle-2', { origin: 'top', delay: 600 });
+  sb.reveal('.home-circle-1', { origin: 'bottom', delay: 500 });
+  sb.reveal('.skills-section .skill:nth-child(even), .personal-details ul li:nth-child(even)', { origin: 'right', delay: 500 });
+  sb.reveal('.skills-section .skill:nth-child(odd), .personal-details ul li:nth-child(odd)', { origin: 'left', delay: 500 });
+
+
   // sb.reveal('', { origin: 'bottom', delay: 500 });
 
   
