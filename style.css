@@ -19,7 +19,7 @@
 .lightmode {
     --primary-color: #0ab8e9;
     --secondary-color: black;
-    --primary-bg-color: #fcfcfc;
+    --primary-bg-color: #fcfcfc00;
     --secondary-bg-color: white;
     --header-bg-color: rgba(255, 255, 255, 0.7);
     --about-bg-color: #ddf0f5;
@@ -212,7 +212,7 @@ span {
     }
 }
 
-.emailLabel{
+.emailLabel {
     color: var(--primary-color);
 }
 
@@ -313,6 +313,10 @@ section {
     background: var(--primary-color);
     color: var(--secondary-bg-color);
     transform: scale(1.3)translateY(-5px);
+}
+.darkmode .social-icons a:hover{
+    background: white;
+    color: var( --primary-color);
 }
 
 .btn {
@@ -462,6 +466,10 @@ section {
     margin-bottom: 1rem;
 }
 
+.darkmode .skills-box:hover h3 {
+    color: black;
+}
+
 .skills-box dl {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
@@ -484,6 +492,11 @@ section {
     }
 }
 
+.darkmode .skills-box:hover dl {
+    dd {
+        color: black;
+    }
+}
 
 
 
@@ -695,6 +708,13 @@ section {
     text-shadow: 1px 1px 12px var(--primary-color);
 }
 
+.darkmode .timeline-item:hover .timeline-date {
+    color: white;
+    margin: 6px 0 15px;
+    text-shadow: 1px 1px 12px var(--primary-color);
+}
+
+
 
 .timeline-date {
     font-size: 20px;
@@ -774,6 +794,13 @@ section {
     }
 }
 
+.darkmode .timeline-content:hover dl
+{
+    dd::before {
+        color: black;
+    }
+}
+
 
 /* Education End */
 
@@ -814,6 +841,13 @@ section {
     background: linear-gradient(90deg, #ffff 0%, #ddf0f5 100%);
     color: var(--secondary-color);
 }
+
+.darkmode .service-container .services-box:hover {
+    color: black;
+}
+
+
+
 
 .services-box .icon {
     font-size: 7rem;
@@ -979,6 +1013,11 @@ footer .social a:hover {
     transform: scale(1.2) translateY(-10px);
     background-color: var(--secondary-bg-color);
     color: var(--primary-color);
+}
+
+.darkmode footer .social a:hover{
+    background: white;
+    color: var( --primary-color);
 }
 
 .footer ul {
