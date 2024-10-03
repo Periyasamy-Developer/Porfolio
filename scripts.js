@@ -56,6 +56,36 @@ window.onload = function () {
 
 
 
+const sections = document.querySelectorAll('section');  // Select all sections
+// const navLinks = document.querySelectorAll('.navbar a'); // Select all navbar links
+
+window.onscroll = () => {
+    let currentSection = "";
+
+    // Get the current scroll position and determine the active section
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id'); // Get the ID of the section in view
+        }
+    });
+
+    // Update active class in the navbar based on the section in view
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(currentSection)) {
+            link.classList.add('active'); // Add active class to the corresponding nav link
+        }
+    });
+};
+
+
+
+
+
+
+
 //#region calculate Age
 const dobInput = "06-04-2002";
 if (dobInput) {
